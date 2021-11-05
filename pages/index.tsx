@@ -1,65 +1,48 @@
 import Head from 'next/head';
 import { FC } from 'react';
+import { Navbar, NavItem, NavTitle } from '../components/Navbar';
+import { FaCar } from 'react-icons/fa';
+import { Address, Hours, Phone, Sidepanel } from '../components/Sidepanel';
+import bgImg from '../images/stock-photo-3.jpg';
+import { BackgroundImage } from '../components/BackgroundImage';
+import { Card } from '../components/Card';
+import { Header } from '../components/Header';
 
 const Home: FC = () => {
    return (
-      <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <div className="min-h-screen bg-gray-200">
          <Head>
-            <title>Create Next App</title>
+            <title>R Core Transmissions - Oklahoma City</title>
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-            <h1 className="text-6xl font-bold">
-               Welcome to{' '}
-               <a className="text-blue-600" href="https://nextjs.org">
-                  Next.js!
-               </a>
-            </h1>
+         <BackgroundImage image={bgImg} />
 
-            <p className="mt-3 text-2xl">
-               Get started by editing <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">pages/index.js</code>
-            </p>
+         <Navbar>
+            <NavItem>
+               <FaCar size="26" />
+            </NavItem>
+            <NavTitle>R Core Transmission Repair</NavTitle>
+            <NavItem>Home</NavItem>
+            <NavItem>About</NavItem>
+            <NavItem>Contact Us</NavItem>
+         </Navbar>
 
-            <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-               <a href="https://nextjs.org/docs" className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
-                  <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-                  <p className="mt-4 text-xl">Find in-depth information about Next.js features and API.</p>
-               </a>
-
-               <a href="https://nextjs.org/learn" className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
-                  <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-                  <p className="mt-4 text-xl">Learn about Next.js in an interactive course with quizzes!</p>
-               </a>
-
-               <a
-                  href="https://github.com/vercel/next.js/tree/master/examples"
-                  className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-               >
-                  <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-                  <p className="mt-4 text-xl">Discover and deploy boilerplate example Next.js projects.</p>
-               </a>
-
-               <a
-                  href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                  className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-               >
-                  <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-                  <p className="mt-4 text-xl">Instantly deploy your Next.js site to a public URL with Vercel.</p>
-               </a>
-            </div>
-         </main>
-
-         <footer className="flex items-center justify-center w-full h-24 border-t">
-            <a
-               className="flex items-center justify-center"
-               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-               target="_blank"
-               rel="noopener noreferrer"
-            >
-               Powered by <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-            </a>
-         </footer>
+         <Sidepanel>
+            <Phone>(405) 789-3332</Phone>
+            <Address>828 N Council Rd, Oklahoma City, OK 73127</Address>
+            <Hours>
+               <div>Monday - Friday</div>
+               <div>8AM - 5PM</div>
+            </Hours>
+         </Sidepanel>
+         <div className="flex justify-center">
+            <Card>
+               <Header>A little about us: </Header>
+               We're an independent transmission shop that's also here for all of your car, truck or SUV’s repair and maintenance needs. From the most
+               basic services, like changing oil, fluids and filters, to the most complicated issues.
+            </Card>
+         </div>
       </div>
    );
 };

@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 module.exports = {
    images: {
       loader: 'imgix',
-      path: 'https://mythosmystery.github.io/notes-web-frontend',
+      path: isProd ? 'https://mythosmystery.github.io/notes-web-frontend' : 'http://localhost:3000',
    },
    assetPrefix: isProd ? '/notes-web-frontend/' : '',
    basePath: isProd ? '/notes-web-frontend' : '',
