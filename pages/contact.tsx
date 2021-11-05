@@ -1,8 +1,8 @@
 import React from 'react';
 import { BackgroundImage } from '../components/BackgroundImage';
-import { Header } from '../components/Header';
 import bgImg from '../images/stock-photo-4.jpg';
 import { Formik } from 'formik';
+import { Header } from '../components/Header';
 
 interface contactProps {}
 
