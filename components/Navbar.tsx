@@ -8,7 +8,7 @@ interface NavItemProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ children }) => {
-   return <div className="sticky top-0 shadow-md h-12 w-full bg-gray-400 flex z-50">{children}</div>;
+   return <div className="sticky top-0 shadow-md h-12 w-full bg-gray-400 sm:flex hidden z-50 justify-end">{children}</div>;
 };
 export const NavItem: React.FC<NavItemProps> = ({ children, href }) => {
    return (
@@ -20,5 +20,9 @@ export const NavItem: React.FC<NavItemProps> = ({ children, href }) => {
    );
 };
 export const NavTitle: React.FC<NavbarProps> = ({ children }) => {
-   return <div className="flex flex-grow text-gray-900/50 text-3xl font-bold justify-center items-center hover:cursor-default">{children}</div>;
+   return (
+      <div className="hidden md:flex lg:text-3xl flex-grow text-gray-900/50 text-xl font-bold justify-center items-center hover:cursor-default">
+         {children}
+      </div>
+   );
 };

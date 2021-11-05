@@ -16,24 +16,25 @@ const Home: FC = () => {
          </Head>
 
          <BackgroundImage image={bgImg} />
-
-         <Sidepanel>
-            <Phone>(405) 789-3332</Phone>
-            <Address>828 N Council Rd, Oklahoma City, OK 73127</Address>
-            <Hours>
-               <div>Monday - Friday</div>
-               <div>8AM - 5PM</div>
-            </Hours>
-         </Sidepanel>
-         <div className="flex justify-center" id="about">
-            <Card>
-               <CardHeader>A little about us: </CardHeader>
-               We're a transmission shop that's also here for all of your car, truck or SUV’s repair and maintenance needs. From the most basic
-               services, like changing oil, fluids and filters, to the most complicated issues. We can handle it! We are independently owned and
-               operated. We have been in business for 24 years, proving that OKC trusts R Core for all of its car care needs.
-            </Card>
+         <div className="flex flex-row">
+            <Sidepanel>
+               <Phone>(405) 789-3332</Phone>
+               <Address>828 N Council Rd, Oklahoma City, OK 73127</Address>
+               <Hours>
+                  <div>Monday - Friday</div>
+                  <div>8AM - 5PM</div>
+               </Hours>
+            </Sidepanel>
+            <div className="flex justify-center" id="about">
+               <Card>
+                  <CardHeader>A little about us: </CardHeader>
+                  We're a transmission shop that's also here for all of your car, truck or SUV’s repair and maintenance needs. From the most basic
+                  services, like changing oil, fluids and filters, to the most complicated issues. We can handle it! We are independently owned and
+                  operated. We have been in business for 24 years, proving that OKC trusts R Core for all of its car care needs.
+               </Card>
+            </div>
          </div>
-         <div className="flex flex-row justify-center mx-6 mt-24 gap-6 my-6" id="reviews">
+         <div className="flex flex-col sm:flex-row justify-center mx-6 gap-6 my-6" id="reviews">
             <ReviewCard name="Michael Carmack">
                This shop was recommended by a trusted mechanic friend. Expedient turnaround. Clean job. Competitive price. Good warranty. Experience.
                Professional & knowledgeable staff. It's been a few months since our F-body 4L60E was rebuilt. So far so good.

@@ -3,7 +3,11 @@ import React from 'react';
 interface SidepanelProps {}
 
 export const Sidepanel: React.FC<SidepanelProps> = ({ children }) => {
-   return <div className="absolute flex flex-col w-1/6 ml-6 my-6 p-3 bg-gray-300/40 justify-center shadow-md z-40 backdrop-blur-xl">{children}</div>;
+   return (
+      <div className="hidden relative md:flex flex-col md:w-full xl:w-2/5 ml-6 my-6 p-3 bg-gray-300/40 justify-center shadow-md z-40 backdrop-blur-xl">
+         {children}
+      </div>
+   );
 };
 
 export const Phone: React.FC<SidepanelProps> = ({ children }) => {
