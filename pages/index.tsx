@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { Address, Hours, Phone, Sidepanel } from '../components/Sidepanel';
 import bgImg from '../images/stock-photo-3.jpg';
 import { BackgroundImage } from '../components/BackgroundImage';
-import { Card } from '../components/Card';
-import { CardHeader } from '../components/CardHeader';
+import Card from '../components/Card';
 import { ReviewCard } from '../components/ReviewCard';
+import { Header } from '../components/Header';
 
 const Home: FC = () => {
    return (
@@ -14,7 +14,9 @@ const Home: FC = () => {
             <title>R Core Transmissions - Oklahoma City</title>
             <link rel="icon" href="/favicon.ico" />
          </Head>
-
+         <div className="md:hidden pt-4">
+            <Header>R Core Transmission</Header>
+         </div>
          <BackgroundImage image={bgImg} />
          <div className="flex flex-row">
             <Sidepanel>
@@ -27,13 +29,14 @@ const Home: FC = () => {
             </Sidepanel>
             <div className="flex justify-center" id="about">
                <Card>
-                  <CardHeader>A little about us: </CardHeader>
+                  <Card.Header>A little about us: </Card.Header>
                   We're a transmission shop that's also here for all of your car, truck or SUV’s repair and maintenance needs. From the most basic
                   services, like changing oil, fluids and filters, to the most complicated issues. We can handle it! We are independently owned and
                   operated. We have been in business for 24 years, proving that OKC trusts R Core for all of its car care needs.
                </Card>
             </div>
          </div>
+         <Header>Reviews</Header>
          <div className="flex flex-col sm:flex-row justify-center mx-6 gap-6 mt-6 pb-6" id="reviews">
             <ReviewCard name="Michael Carmack">
                This shop was recommended by a trusted mechanic friend. Expedient turnaround. Clean job. Competitive price. Good warranty. Experience.

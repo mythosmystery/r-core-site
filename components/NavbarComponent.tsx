@@ -1,20 +1,20 @@
 import React from 'react';
 import { FaCar } from 'react-icons/fa';
-import { Navbar, NavItem, NavTitle } from './Navbar';
+import Navbar from './Navbar';
 
 interface NavbarComponentProps {}
 
 export const NavbarComponent: React.FC<NavbarComponentProps> = ({}) => {
    return (
       <Navbar>
-         <NavItem href="/">
+         <Navbar.Item href="/">
             <FaCar size="26" />
-         </NavItem>
-         <NavTitle>R Core Transmission Repair</NavTitle>
-         <NavItem href="/#">Home</NavItem>
-         <NavItem href="/#about">About</NavItem>
-         <NavItem href="/#reviews">Reviews</NavItem>
-         <NavItem href="/contact">Contact Us</NavItem>
+         </Navbar.Item>
+         <Navbar.Title>R Core Transmission Repair</Navbar.Title>
+         <Navbar.Item href="/#">Home</Navbar.Item>
+         <Navbar.Item href="/#about">About</Navbar.Item>
+         <Navbar.Item href="/#reviews">Reviews</Navbar.Item>
+         <Navbar.Item href="/contact">Contact Us</Navbar.Item>
       </Navbar>
    );
 };
