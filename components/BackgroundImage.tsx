@@ -7,7 +7,7 @@ interface BackgroundImageProps {
 
 export const BackgroundImage: React.FC<BackgroundImageProps> = ({ image }) => {
    return (
-      <div className="fixed z-0">
+      <div className="fixed z-0 hidden md:flex">
          <Image src={image} />
       </div>
    );

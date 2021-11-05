@@ -5,7 +5,7 @@ import { NavbarComponent } from '../components/NavbarComponent';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
    return (
-      <div className="min-h-screen bg-gray-200">
+      <div className="min-h-screen bg-gray-500">
          <NavbarComponent />
          <Component {...pageProps} />
       </div>

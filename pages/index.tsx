@@ -34,7 +34,7 @@ const Home: FC = () => {
                </Card>
             </div>
          </div>
-         <div className="flex flex-col sm:flex-row justify-center mx-6 gap-6 my-6" id="reviews">
+         <div className="flex flex-col sm:flex-row justify-center mx-6 gap-6 mt-6 pb-6" id="reviews">
             <ReviewCard name="Michael Carmack">
                This shop was recommended by a trusted mechanic friend. Expedient turnaround. Clean job. Competitive price. Good warranty. Experience.
                Professional & knowledgeable staff. It's been a few months since our F-body 4L60E was rebuilt. So far so good.
