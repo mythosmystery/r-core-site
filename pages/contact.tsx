@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { BackgroundImage } from '../components/BackgroundImage';
 import bgImg from '../images/stock-photo-4.jpg';
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from 'formik';
@@ -42,6 +43,7 @@ const contact: React.FC<contactProps> = ({}) => {
                         >
                            Send
                         </button>
+                        <Link href="mailto:axiysfire@gmail.com">Email</Link>
                      </div>
                   </Form>
                )}
