@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { FC } from 'react';
 import { Address, Hours, Phone, Sidepanel } from '../components/Sidepanel';
-import bgImg from '../images/stock-photo-3.jpg';
-import { BackgroundImage } from '../components/BackgroundImage';
 import Card from '../components/Card';
 import { ReviewCard } from '../components/ReviewCard';
 import { Header } from '../components/Header';
+import { BackgroundImage } from '../components/BackgroundImage';
+import img from '../images/stock-photo-3.jpg';
 
 const Home: FC = () => {
    return (
@@ -14,10 +14,10 @@ const Home: FC = () => {
             <title>R Core Transmissions - Oklahoma City</title>
             <link rel="icon" href="/favicon.ico" />
          </Head>
+         <BackgroundImage image={img} />
          <div className="md:hidden pt-4">
             <Header>R Core Transmission</Header>
          </div>
-         <BackgroundImage image={bgImg} />
          <div className="flex flex-row">
             <Sidepanel>
                <Phone>(405) 789-3332</Phone>
@@ -27,17 +27,15 @@ const Home: FC = () => {
                   <div>8AM - 5PM</div>
                </Hours>
             </Sidepanel>
-            <div className="flex justify-center" id="about">
-               <Card>
-                  <Card.Header>A little about us: </Card.Header>
-                  We're a transmission shop that's also here for all of your car, truck or SUV’s repair and maintenance needs. From the most basic
-                  services, like changing oil, fluids and filters, to the most complicated issues. We can handle it! We are independently owned and
-                  operated. We have been in business for 24 years, proving that OKC trusts R Core for all of its car care needs.
-               </Card>
-            </div>
+            <Card>
+               <Card.Header>A little about us: </Card.Header>
+               We're a transmission shop that's also here for all of your car, truck or SUV’s repair and maintenance needs. From the most basic
+               services, like changing oil, fluids and filters, to the most complicated issues. We can handle it! We are independently owned and
+               operated. We have been in business for 24 years, proving that Oklahoma City trusts R Core Transmission for all of its car care needs.
+            </Card>
          </div>
          <Header>Reviews</Header>
-         <div className="flex flex-col sm:flex-row justify-center mx-6 gap-6 mt-6 pb-6" id="reviews">
+         <div className="flex flex-col md:flex-row justify-center mx-6 gap-6 mt-6 pb-6" id="reviews">
             <ReviewCard name="Michael Carmack">
                This shop was recommended by a trusted mechanic friend. Expedient turnaround. Clean job. Competitive price. Good warranty. Experience.
                Professional & knowledgeable staff. It's been a few months since our F-body 4L60E was rebuilt. So far so good.

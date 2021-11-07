@@ -7,7 +7,7 @@ interface ReviewCardProps {
 
 export const ReviewCard: React.FC<ReviewCardProps> = ({ children, name }) => {
    return (
-      <div className="flex flex-col text-center p-4 bg-gray-400/50 flex-grow italic text-gray-900 backdrop-blur-xl shadow-lg z-50">
+      <div className="flex flex-col text-center p-4 bg-gray-400/50 flex-grow italic text-gray-900 backdrop-blur-xl shadow-lg z-40">
          "{children}"
          <div className="flex flex-row justify-evenly items-center mt-1">
             <Stars />
